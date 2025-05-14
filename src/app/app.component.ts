@@ -5,7 +5,7 @@ import { NavbarPcComponent } from './navbar-pc/navbar-pc.component';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, NavbarPcComponent],
+  imports: [NavbarPcComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
