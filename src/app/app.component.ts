@@ -1,11 +1,11 @@
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
 import { NavbarPcComponent } from './navbar-pc/navbar-pc.component';
+import { NavbarMobileComponent } from "./navbar-mobile/navbar-mobile.component";
 
 
 @Component({
   selector: 'app-root',
-  imports: [NavbarPcComponent],
+  imports: [NavbarPcComponent, NavbarMobileComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
