@@ -1752,7 +1752,7 @@ footer {
         height: 30px;
         width: fit-content
     }
-
+/* Estilo para el menu en Movil */
     .mobile-navbar-tabs-li a {
       font-family: 'Fira Code', monospace; /* Tipografía consistente */
       background-image: linear-gradient(
@@ -1769,6 +1769,8 @@ footer {
       font-weight: 600;
       letter-spacing: 1px;
     }
+
+
 
     @keyframes text-gradient {
       to {
@@ -2076,3 +2078,8 @@ footer {
   }
 }
 
+span{
+  display: block;
+  padding:10px;
+  height:1000px;
+}

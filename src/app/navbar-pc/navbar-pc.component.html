@@ -1,20 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
+
 </head>
+
 <body>
   <header>
-    <div class="cursor-inner" id="cursor-inner"></div>
-    <div class="cursor-outer" id="cursor-outer"></div>
-<!-- Menu Navbar Ordenador -->
+
+    <div class="mouse-container" (mousemove)="onMouseMove($event)">
+      <img src="../crescent-moon.png" class="floating-image" [style.left.px]="mouseX" [style.top.px]="mouseY" />
+    </div>
+
+    <!-- Menu Navbar Ordenador -->
     <div class="navbar" id="navbar">
       <div class="hey">Hey!</div>
       <div class="logo" tabindex="0" aria-label="vinod jangid logo">
         <div class="logo-top">
-          <img src="src/png/nav-avatar.png" alt="animation-head" id="nav-avatar"/>
+          <img src="../crescent-moon.png" alt="animation-head" id="nav-avatar" />
         </div>
       </div>
       <div class="navbar-tabs" id="navbar-tabs">
@@ -49,4 +55,5 @@
   </header>
   <!-- header ends here -->
 </body>
+
 </html>
