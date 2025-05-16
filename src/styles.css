@@ -252,7 +252,7 @@ html {
     position: relative;
     width: 40px;
     height: 40px;
-    background-image: url(../public/crescent-moon.png);
+    /* background-image: url(../public/crescent-moon.png); */
     background-size: 50%;
     transition-duration: .5s;
     cursor: pointer
