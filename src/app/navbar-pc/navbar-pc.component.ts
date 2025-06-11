@@ -1,4 +1,4 @@
-import { Component, HostListener, input, signal } from '@angular/core';
+import { Component, HostListener } from '@angular/core';
 
 @Component({
   selector: 'app-navbar-pc',
@@ -9,10 +9,13 @@ export class NavbarPcComponent {
 
   mouseX = 0;
   mouseY = 0;
+  mostrarCursor = true;
 
+  @HostListener('window:mousemove', ['$event'])
   onMouseMove(event: MouseEvent) {
-    this.mouseX = event.offsetX;
-    this.mouseY = event.offsetY;
+    console.log('Mouse moved:', event.clientX, event.clientY);
+    this.mouseX = event.clientX;
+    this.mouseY = event.clientY;
   }
 
 }

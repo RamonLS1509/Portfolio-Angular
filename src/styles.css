@@ -136,7 +136,8 @@ html {
 .cursor-outer {
     width: 35px;
     height: 35px;
-    border: 2px solid #fff
+    border: 2px solid #fff;
+    background-image: url('/menu.svg');
 }
 
 .cursor-inner,
@@ -2017,4 +2018,17 @@ footer {
         height: fit-content;
         margin-top: 100px;
     }
+}
+
+/* Funcion para que la imagen siga al raton */
+.cursor-imagen {
+  position: fixed;
+  width: 32px;
+  height: 32px;
+  pointer-events: none;
+  z-index: 9999;
+}
+
+.contenedor {
+  cursor: none;
 }

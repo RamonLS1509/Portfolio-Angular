@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
-   <title>Vinod Jangid | Portfolio</title>
+  <title>Vinod Jangid | Portfolio</title>
 
   <!-- <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" /> -->
   <!-- stylesheet -->
@@ -13,17 +14,30 @@
   <link rel="stylesheet"
     href="https://fonts.googleapis.com/css2?family=Passions+Conflict&family=Orbitron&family=Fira+Code&family=Six+Caps" />
 </head>
+
 <body>
   <header>
-    <p>Posición del ratón: {{ mouseX }}, {{ mouseY }}</p>
-    <div class="cursor-outer" id="cursor-outer" (mousemove)="onMouseMove($event)"></div>
 
-<!-- Menu Navbar Ordenador -->
+    <!-- <div class="cursor-outer" id="cursor-outer" (mousemove)="onMouseMove($event)"></div> -->
+<div (mousemove)="onMouseMove($event)" class="contenedor">
+  <!-- Tu contenido -->
+
+  @if (mostrarCursor) {
+    <img
+      [style.left.px]="mouseX"
+      [style.top.px]="mouseY"
+      src="icons/nav-avatar.png"
+      class="cursor-imagen"
+    />
+  }
+</div>
+
+    <!-- Menu Navbar Ordenador -->
     <div class="navbar" id="navbar">
       <div class="hey">Hey!</div>
       <div class="logo" tabindex="0" aria-label="vinod jangid logo">
         <div class="logo-top">
-          <img src="icons/nav-avatar.png" alt="animation-head" id="nav-avatar"/>
+          <img src="icons/nav-avatar.png" alt="animation-head" id="nav-avatar" />
         </div>
       </div>
       <div class="navbar-tabs" id="navbar-tabs">
@@ -31,7 +45,7 @@
           <li class="home activeThistab" class="navbar-tabs-li" data-aos="fade-down" data-aos-delay="100">
             <a href="#home" tabindex="0" aria-label="Home menu button">
               &#60;/Home&#62;
-
+              <p>Posición del ratón: {{ mouseX }}, {{ mouseY }}</p>
             </a>
           </li>
 
@@ -60,4 +74,5 @@
   <!-- header ends here -->
 
 </body>
+
 </html>
