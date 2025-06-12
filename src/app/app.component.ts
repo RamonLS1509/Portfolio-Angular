@@ -1,11 +1,18 @@
+// src/app/app.component.ts
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { provideRouter } from '@angular/router';
+import { NavbarPcComponent }    from './navbar-pc/navbar-pc.component';
+import { NavbarMobileComponent }from './navbar-mobile/navbar-mobile.component';
 
 @Component({
+  standalone: true,
   selector: 'app-root',
-  imports: [RouterOutlet],
   templateUrl: './app.component.html',
-  styleUrl: './app.component.css'
+  styleUrls:   ['./app.component.css'],
+  imports: [
+    NavbarPcComponent,
+    NavbarMobileComponent,
+  ]
 })
 export class AppComponent {
   title = 'Portfolio-Angular';

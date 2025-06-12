@@ -1,0 +1,33 @@
+.mouse-container {
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+  cursor: url('../../../public/crescent-moon.png'), auto;
+}
+
+.floating-image {
+  position: fixed; /* importante: usa 'fixed', no 'absolute' */
+  width: 50px;
+  height: 50px;
+  pointer-events: none;
+  z-index: 1000;
+  transition: transform 0.03s linear;
+}
+
+.navbar-tabs-ul a {
+      font-family: 'Fira Code', monospace; /* Tipografía consistente */
+      background-image: linear-gradient(
+        to right,
+        #6bc5f8 0%,
+        #cf59e6 50%,
+        #6bc5f8 100%
+      );
+      background-size: 200% auto;
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      animation: text-gradient 3s linear infinite;
+      font-weight: 600;
+      letter-spacing: 1px;
+    }
